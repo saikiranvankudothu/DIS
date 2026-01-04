@@ -84,14 +84,15 @@ Powered by **Llama-3.3-70B Versatile** (via Groq API):
 ### **1. Clone the repository**
 
 ```bash
-git clone https://github.com/yourusername/document-intelligence.git
-cd document-intelligence
+git clone https://github.com/yourusername/DIS.git
+cd DIS
 ```
 
-### **2. Install dependencies**
+### **2. Install dependencies by uv and activate .venv**
 
 ```
-pip install -r requirements.txt
+uv sync
+.venv\Scripts\activate.bat
 ```
 
 ### **Add .env file**
@@ -99,12 +100,11 @@ pip install -r requirements.txt
 ```
 GROQ_API_KEY=your_groq_key_here
 GROQ_MODEL=llama-3.3-70b-versatile
-UPLOAD_FOLDER=uploads
-STRUCTURED_OUTPUT=outputs/structured
+FLASK_ENV=development
 ```
 
 ### **Run the application**
 
 ```
-python app.py
+uv run python app.py
 ```
